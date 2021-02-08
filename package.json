@@ -1,0 +1,16 @@
+{
+  "name": "qrcode_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DJS Technologies",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.8.2",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
+  }
+}
