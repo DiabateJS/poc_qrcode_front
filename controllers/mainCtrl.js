@@ -13,10 +13,6 @@ app.controller('MainController',function($scope, QrCodeService){
     };
 
     $scope.genQrCode = () => {
-        QrCodeService.getQrCode($scope.celibataire).then(response => {
-            if (response.data){
-                console.log(response.data);
-            }
-        })
+        $scope.qrcode_data = JSON.stringify($scope.celibataire);
     }
 });
