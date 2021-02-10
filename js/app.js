@@ -7,7 +7,7 @@ app.config(['$routeProvider', function config($routeProvider){
         }).
         when('/read_qrcode',{
             templateUrl: 'views/from_qrcode.html',
-            controller: 'MainController'
+            controller: 'QrCodeToFormController'
         }).
         otherwise('/');
 }]);

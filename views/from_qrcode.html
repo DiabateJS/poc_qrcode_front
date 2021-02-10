@@ -1,0 +1,26 @@
+
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Sortie lecteur QRCode</label>
+            <div class="col-sm-10">
+              <textarea type="text" class="form-control-plaintext" ng-model="qrcode_input"></textarea>
+            </div>
+            <button class="btn btn-primary" ng-click="genForm()">Générer formulaire</button><br>
+            <button class="btn btn-primary" ng-click="fillForm()" ng-if="canFillForm">Préremplire</button>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+        <h3 class="text-center">{{form.name}}</h3>
+    <form>
+        <div class="form-group row" ng-repeat="field in form.fields">
+          <label class="col-sm-2 col-form-label">{{field.libelle}}</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control-plaintext" id="{{field.id}}_{{field.name}}">
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
