@@ -11,6 +11,7 @@
   "dependencies": {
     "angular": "^1.8.2",
     "angular-qrcode": "^7.2.0",
+    "angular-route": "^1.8.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1"
   }

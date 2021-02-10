@@ -24,6 +24,7 @@ app.controller('MainController',function($scope, FormService){
         $scope.form.fields.forEach(field => {
             $scope.data[field.name] = document.getElementById(field.id+'_'+field.name).value; 
         });
+        console.log($scope.data);
         $scope.qrcode_data = JSON.stringify($scope.data);
     }
 

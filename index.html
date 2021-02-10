@@ -5,41 +5,12 @@
         <title>Form QR Code</title>
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     </head>
-    <body ng-app="app" ng-controller="MainController" ng-init="loadData()">
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label">Formulaire</label>
-                  <div class="col-sm-5">
-                    <select class="form-control-plaintext" ng-model="form.id" ng-change="onFormChange(form.id)">
-                      <option ng-repeat="form in forms" value="{{form.id}}">{{form.name}}</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <h3 class="text-center">{{form.name}}</h3>
-                <form>
-                    <div class="form-group row" ng-repeat="field in form.fields">
-                      <label class="col-sm-2 col-form-label">{{field.libelle}}</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control-plaintext" id="{{field.id}}_{{field.name}}">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="col-lg-4">
-                    <button class="btn btn-primary" ng-click="genQrCode()">Générer QR Code</button><br><br>
-                    <qrcode data="{{qrcode_data}}" download></qrcode>
-                </div>
-            </div>
-        </div>
+    <body ng-app="app">
+        <div class="container" ng-view></div>
         <script src="node_modules/jquery/dist/jquery.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
         <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
         <script src="node_modules/qrcode-generator/qrcode.js"></script>
         <script src="node_modules/qrcode-generator/qrcode_UTF8.js"></script>
         <script src="node_modules/angular-qrcode/angular-qrcode.js"></script>
